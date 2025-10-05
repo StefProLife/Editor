@@ -22,4 +22,4 @@ public:
     }
 };
 
-using DocumentPtr = std::shared_ptr<IDocumentModel>;
+using DocumentModelPtr = std::shared_ptr<IDocumentModel>;

@@ -14,3 +14,5 @@ public:
         this == &other;
     }
 };
+
+using ViewEditorPtr = std::shared_ptr<IViewEditor>;
