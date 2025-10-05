@@ -2,18 +2,20 @@ cmake_minimum_required(VERSION 3.12)
 
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
+set(INCLUDE_DIR "${CMAKE_BINARY_DIR}/../include")
+file(GLOB SOURCES "src/*.cpp")
 
 project(Editor_Project VERSION ${PROJECT_VESRION})
 
-add_executable(editor main.cpp)
+add_executable(editor ${SOURCES})
 
 set_target_properties(editor PROPERTIES
-    CXX_STANDARD 17
+    CXX_STANDARD 20
     CXX_STANDARD_REQUIRED ON
 )
 
 target_include_directories(editor
-    PRIVATE "${CMAKE_BINARY_DIR}"
+    PRIVATE "${INCLUDE_DIR}"
 )
 
 install(TARGETS editor RUNTIME DESTINATION bin)
