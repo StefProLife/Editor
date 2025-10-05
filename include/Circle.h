@@ -9,5 +9,5 @@ public:
     void Draw() override;
 
 private:
-    std::string _circle = "Drawing a circle";
+    const std::string _circle = "Drawing a circle";
 };
