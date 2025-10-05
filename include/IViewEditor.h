@@ -9,4 +9,8 @@ public:
     virtual void ExportDocumentInFile() = 0;
     virtual void CreateGraphicPrimitive() = 0;
     virtual void DeleteGraphicPrimitive() = 0;
+    bool operator ==(const IViewEditor& other) const
+    {
+        this == &other;
+    }
 };
