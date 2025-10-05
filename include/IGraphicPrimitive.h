@@ -12,6 +12,6 @@ public:
     virtual const GraphicColor GetColor() = 0;
     virtual void SetColor(const GraphicColor color) = 0;
 
-    virtual const GraphicRender GetDept() = 0;
-    virtual void SetDept(const GraphicRender type) = 0;
+    virtual const GraphicRender GetRender() = 0;
+    virtual void SetRender(const GraphicRender render) = 0;
 };
