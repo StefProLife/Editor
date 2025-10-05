@@ -1,8 +1,8 @@
 #pragma once
 
-#include "IDocumentEditor.h"
+#include "IDocumentModel.h"
 
-class DocumentEditor : IDocumentEditor
+class DocumentModel : IDocumentModel
 {
 public:
     void AddPrimitive(GraphicPrimitivePtr primitive) override;

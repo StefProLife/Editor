@@ -3,10 +3,10 @@
 #include <vector>
 #include "IGraphicPrimitive.h"
 
-class IDocumentEditor
+class IDocumentModel
 {
 public:
-    virtual ~IDocumentEditor() = default;
+    virtual ~IDocumentModel() = default;
     virtual void AddPrimitive(GraphicPrimitivePtr primitive) = 0;
     virtual void RemovePrimitive(GraphicPrimitivePtr primitive) = 0;
     virtual std::vector<GraphicPrimitivePtr> GetPrimitives() const = 0;
