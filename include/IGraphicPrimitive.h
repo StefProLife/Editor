@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "GraphicColor.h"
 #include "GraphicRender.h"
 
@@ -15,3 +16,5 @@ public:
     virtual const GraphicRender GetRender() = 0;
     virtual void SetRender(const GraphicRender render) = 0;
 };
+
+using GraphicPrimitivePtr = std::shared_ptr<IGraphicPrimitive>;
