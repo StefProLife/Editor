@@ -3,7 +3,7 @@
 #include "IEditorModel.h"
 #include "IViewEditor.h"
 
-class EditorModel : IEditorModel
+class EditorModel : public IEditorModel
 {
 public:
     EditorModel(ViewEditorPtr view);

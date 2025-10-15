@@ -42,7 +42,7 @@ void DocumentModel::Export()
     // Запись в файл из вектора примитивов...
 }
 
-void DocumentModel::Import()
+void DocumentModel::Import(const std::string& fileName)
 {
     std::cout << "Model | " << _nameDocument << " | import Import" << std::endl;
     // Запись в вектор примитивов из файла...

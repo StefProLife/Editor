@@ -2,7 +2,7 @@
 
 #include "IDocumentModel.h"
 
-class DocumentModel : IDocumentModel
+class DocumentModel : public IDocumentModel
 {
 public:
     void AddPrimitive(GraphicPrimitivePtr primitive) override;
@@ -12,7 +12,7 @@ public:
     const std::string& GetName() override;
     void SetName(const std::string& name) override;
     void Export() override;
-    void Import() override;
+    void Import(const std::string& fileName) override;
 
 private:
     std::string _nameDocument = "New document";

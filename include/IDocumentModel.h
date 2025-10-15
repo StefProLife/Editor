@@ -13,10 +13,10 @@ public:
     virtual void RemovePrimitive(GraphicPrimitivePtr primitive) = 0;
     virtual const std::vector<GraphicPrimitivePtr>& GetPrimitives() const = 0;
     virtual void SetPrimitives(const std::vector<GraphicPrimitivePtr> vectorPrimitives) = 0;
-    virtual const std::string& GetName();
-    virtual void SetName(const std::string& name);
-    virtual void Export();
-    virtual void Import();
+    virtual const std::string& GetName() = 0;
+    virtual void SetName(const std::string& name) = 0;
+    virtual void Export() = 0;
+    virtual void Import(const std::string& fileName) = 0;
     bool operator ==(const IDocumentModel& other) const
     {
         return this == &other;

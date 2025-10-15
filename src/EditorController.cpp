@@ -7,23 +7,32 @@ EditorController::EditorController(EditorModelPtr model)
 
 void EditorController::CreateNewDocument()
 {
-    //auto doc = std::make_shared<IDocumentModel>(new DocumentModel());
-    //_model->AddDocument(doc);
+    // По-хорошему логика создания "некоторого конкретного" DocumentModel
+    const auto doc = std::make_shared<DocumentModel>();
+    _model->AddDocument(doc);
 }
 
 void EditorController::ImportDocumentFromFile(const std::string& fileName)
 {
+    const auto doc = std::make_shared<DocumentModel>();
+    doc->SetName(fileName);
+    doc->Import(fileName);
+    _model->AddDocument(doc);
 }
 
 void EditorController::ExportDocumentToFile(const std::string& fileName)
 {
     auto docs = _model->GetDocuments();
     if (docs.size() == 0) return;
-    for (const auto& item : docs)
-    {
-        if (item->GetName() == fileName)
-            item->Import();
-    }
+    auto it = std::find_if(docs.begin(),
+                           docs.end(),
+                           [&fileName](const DocumentModelPtr p)
+                           {
+                                if (!p) return false;
+                                return (p->GetName() == fileName);
+                          });
+    if (it != docs.end())
+        (*it)->Export();
 }
 
 void EditorController::CreatingGraphicalPrimitive()
