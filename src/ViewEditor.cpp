@@ -1,27 +1,11 @@
 #include <iostream>
 #include "ViewEditor.h"
 
-void ViewEditor::CreateNewDocument()
-{
-    std::cout << "CreateNewDocument" << std::endl;
-}
+ViewEditor::ViewEditor(EditorModelPtr model)
+    : _model(model)
+{}
 
-void ViewEditor::ImportDocumentFromFile()
+void ViewEditor::Update()
 {
-    std::cout << "ImportDocumentFromFile" << std::endl;
-}
-
-void ViewEditor::ExportDocumentInFile()
-{
-    std::cout << "ExportDocumentInFile" << std::endl;
-}
-
-void ViewEditor::CreateGraphicPrimitive()
-{
-    std::cout << "CreateGraphicPrimitive" << std::endl;
-}
-
-void ViewEditor::DeleteGraphicPrimitive()
-{
-    std::cout << "DeleteGraphicPrimitive" << std::endl;
+    std::cout << "Update UI. It is necessary to implement pulls of data from the model." << std::endl;;
 }

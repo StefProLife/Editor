@@ -16,7 +16,7 @@ void EditorModel::RemoveDocument(const DocumentModelPtr document)
 
 const std::vector<DocumentModelPtr>& EditorModel::GetDocuments() const
 {
-    return static_cast<const std::vector<DocumentModelPtr>>(_vectorDocuments);
+    return _vectorDocuments;
 }
 
 void EditorModel::SetDocuments(const std::vector<DocumentModelPtr>& vectorDocument)

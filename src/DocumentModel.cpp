@@ -18,7 +18,7 @@ void DocumentModel::RemovePrimitive(const GraphicPrimitivePtr primitive)
 
 const std::vector<GraphicPrimitivePtr>& DocumentModel::GetPrimitives() const
 {
-    return static_cast<const std::vector<GraphicPrimitivePtr>>(_vectorPrimitives);
+    return _vectorPrimitives;
 }
 
 void DocumentModel::SetPrimitives(const std::vector<GraphicPrimitivePtr> vectorPrimitives)
@@ -28,7 +28,7 @@ void DocumentModel::SetPrimitives(const std::vector<GraphicPrimitivePtr> vectorP
 
 const std::string& DocumentModel::GetName()
 {
-    return static_cast<const std::string>(_nameDocument);
+    return _nameDocument;
 }
 
 void DocumentModel::SetName(const std::string& name)

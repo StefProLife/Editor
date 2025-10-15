@@ -19,7 +19,7 @@ public:
     virtual void Import();
     bool operator ==(const IDocumentModel& other) const
     {
-        this == &other;
+        return this == &other;
     }
 };
 

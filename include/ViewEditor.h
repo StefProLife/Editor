@@ -5,9 +5,9 @@
 class ViewEditor : public IViewEditor
 {
 public:
-    void CreateNewDocument() override;
-    void ImportDocumentFromFile() override;
-    void ExportDocumentInFile() override;
-    void CreateGraphicPrimitive() override;
-    void DeleteGraphicPrimitive() override;
+    ViewEditor(EditorModelPtr model);
+    void Update() override;
+
+private:
+    EditorModelPtr _model;
 };

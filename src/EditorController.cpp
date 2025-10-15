@@ -1,6 +1,6 @@
 #include "EditorController.h"
 
-EditorController::EditorController(EditorModelePtr model)
+EditorController::EditorController(EditorModelPtr model)
     : _model(model)
 {}
 

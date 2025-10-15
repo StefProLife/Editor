@@ -13,8 +13,8 @@ public:
     virtual void SetDocuments(const std::vector<DocumentModelPtr>& vectorDocuments) = 0;
     bool operator ==(const IEditorModel& other) const
     {
-        this == &other;
+        return this == &other;
     }
 };
 
-using EditorModelePtr = std::shared_ptr<IEditorModel>;
+using EditorModelPtr = std::shared_ptr<IEditorModel>;
