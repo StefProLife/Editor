@@ -1,12 +1,14 @@
 #include "EditorController.h"
+#include "DocumentModel.h"
 
 EditorController::EditorController(EditorModelPtr model)
     : _model(model)
 {}
 
-void EditorController::CreateNewDocument(const DocumentModelPtr doc)
+void EditorController::CreateNewDocument()
 {
-    _model->AddDocument(doc);
+    //auto doc = std::make_shared<IDocumentModel>(new DocumentModel());
+    //_model->AddDocument(doc);
 }
 
 void EditorController::ImportDocumentFromFile(const std::string& fileName)

@@ -9,8 +9,8 @@ class IDocumentModel
 {
 public:
     virtual ~IDocumentModel() = default;
-    virtual void AddPrimitive(const GraphicPrimitivePtr primitive) = 0;
-    virtual void RemovePrimitive(const GraphicPrimitivePtr primitive) = 0;
+    virtual void AddPrimitive(GraphicPrimitivePtr primitive) = 0;
+    virtual void RemovePrimitive(GraphicPrimitivePtr primitive) = 0;
     virtual const std::vector<GraphicPrimitivePtr>& GetPrimitives() const = 0;
     virtual void SetPrimitives(const std::vector<GraphicPrimitivePtr> vectorPrimitives) = 0;
     virtual const std::string& GetName();

@@ -2,14 +2,14 @@
 #include "DocumentModel.h"
 
 
-void DocumentModel::AddPrimitive(const GraphicPrimitivePtr primitive)
+void DocumentModel::AddPrimitive(GraphicPrimitivePtr primitive)
 {
     auto it = std::find(_vectorPrimitives.cbegin(), _vectorPrimitives.cend(), primitive);
     if (it != _vectorPrimitives.cend()) return;
     _vectorPrimitives.push_back(primitive);
 }
 
-void DocumentModel::RemovePrimitive(const GraphicPrimitivePtr primitive)
+void DocumentModel::RemovePrimitive(GraphicPrimitivePtr primitive)
 {
     auto it = std::find(_vectorPrimitives.cbegin(), _vectorPrimitives.cend(), primitive);
     if (it == _vectorPrimitives.cend()) return;

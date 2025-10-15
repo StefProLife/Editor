@@ -5,7 +5,7 @@
 class EditorController
 {
     EditorController(EditorModelPtr model);
-    void CreateNewDocument(const DocumentModelPtr doc);
+    void CreateNewDocument();
     void ImportDocumentFromFile(const std::string& fileName);
     void ExportDocumentToFile(const std::string& fileName);
     void CreatingGraphicalPrimitive();

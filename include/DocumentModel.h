@@ -5,8 +5,8 @@
 class DocumentModel : IDocumentModel
 {
 public:
-    void AddPrimitive(const GraphicPrimitivePtr primitive) override;
-    void RemovePrimitive(const GraphicPrimitivePtr primitive) override;
+    void AddPrimitive(GraphicPrimitivePtr primitive) override;
+    void RemovePrimitive(GraphicPrimitivePtr primitive) override;
     const std::vector<GraphicPrimitivePtr>& GetPrimitives() const override;
     void SetPrimitives(const std::vector<GraphicPrimitivePtr> vectorPrimitives) override;
     const std::string& GetName() override;
