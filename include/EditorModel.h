@@ -5,10 +5,10 @@
 class EditorModel : IEditorModel
 {
 public:
-    void AddDocument(DocumentModelPtr document) override;
-    void RemoveDocument(DocumentModelPtr document) override;
-    std::vector<DocumentModelPtr> GetDocuments() const override;
-    void SetDocuments(const std::vector<DocumentModelPtr> vectorDocuments) override;
+    void AddDocument(const DocumentModelPtr document) override;
+    void RemoveDocument(const DocumentModelPtr document) override;
+    const std::vector<DocumentModelPtr>& GetDocuments() const override;
+    void SetDocuments(const std::vector<DocumentModelPtr>& vectorDocuments) override;
 
 private:
     std::vector<DocumentModelPtr> _vectorDocuments;

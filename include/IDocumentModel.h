@@ -9,13 +9,14 @@ class IDocumentModel
 {
 public:
     virtual ~IDocumentModel() = default;
-    virtual void AddPrimitive(GraphicPrimitivePtr primitive) = 0;
-    virtual void RemovePrimitive(GraphicPrimitivePtr primitive) = 0;
-    virtual std::vector<GraphicPrimitivePtr> GetPrimitives() const = 0;
+    virtual void AddPrimitive(const GraphicPrimitivePtr primitive) = 0;
+    virtual void RemovePrimitive(const GraphicPrimitivePtr primitive) = 0;
+    virtual const std::vector<GraphicPrimitivePtr>& GetPrimitives() const = 0;
     virtual void SetPrimitives(const std::vector<GraphicPrimitivePtr> vectorPrimitives) = 0;
-    virtual const std::string GetNameDocument();
-    virtual void SetNameDocument(const std::string name);
-    virtual const std::string DefaultNameWithCreate();
+    virtual const std::string& GetName();
+    virtual void SetName(const std::string& name);
+    virtual void Export();
+    virtual void Import();
     bool operator ==(const IDocumentModel& other) const
     {
         this == &other;

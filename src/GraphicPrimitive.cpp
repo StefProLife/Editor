@@ -1,21 +1,21 @@
 #include "GraphicPrimitive.h"
 
-const GraphicColor GraphicPrimitive::GetColor()
+GraphicColor GraphicPrimitive::GetColor()
 {
     return static_cast<const GraphicColor>(_color);
 }
 
-void GraphicPrimitive::SetColor(const GraphicColor color)
+void GraphicPrimitive::SetColor(GraphicColor color)
 {
     _color = color;
 }
 
-const GraphicRender GraphicPrimitive::GetRender()
+GraphicRender GraphicPrimitive::GetRender()
 {
     return static_cast<GraphicRender>(_render);
 }
 
-void GraphicPrimitive::SetRender(const GraphicRender render)
+void GraphicPrimitive::SetRender(GraphicRender render)
 {
     _render = render;
 }

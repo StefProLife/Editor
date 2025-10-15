@@ -5,16 +5,16 @@
 class DocumentModel : IDocumentModel
 {
 public:
-    void AddPrimitive(GraphicPrimitivePtr primitive) override;
-    void RemovePrimitive(GraphicPrimitivePtr primitive) override;
-    std::vector<GraphicPrimitivePtr> GetPrimitives() const override;
+    void AddPrimitive(const GraphicPrimitivePtr primitive) override;
+    void RemovePrimitive(const GraphicPrimitivePtr primitive) override;
+    const std::vector<GraphicPrimitivePtr>& GetPrimitives() const override;
     void SetPrimitives(const std::vector<GraphicPrimitivePtr> vectorPrimitives) override;
-    const std::string GetNameDocument();
-    void SetNameDocument(const std::string name);
-    virtual const std::string DefaultNameWithCreate();
+    const std::string& GetName() override;
+    void SetName(const std::string& name) override;
+    void Export() override;
+    void Import() override;
 
 private:
-    const std::string _defaultName = "New file";
-    std::string _nameDocument = _defaultName;
+    std::string _nameDocument = "New document";
     std::vector<GraphicPrimitivePtr> _vectorPrimitives;
 };
