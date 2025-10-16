@@ -1,3 +1,4 @@
+#include <algorithm> 
 #include "EditorController.h"
 #include "DocumentModel.h"
 #include "Rectangle.h"
