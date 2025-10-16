@@ -2,12 +2,19 @@ cmake_minimum_required(VERSION 3.12)
 
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
-set(INCLUDE_DIR "${CMAKE_BINARY_DIR}/../include")
-file(GLOB SOURCES "src/*.cpp")
+set(SOURCES_FILE src/Circle.cpp
+		   src/DocumentModel.cpp
+		   src/EditorController.cpp
+		   src/EditorModel.cpp
+		   src/GraphicPrimitive.cpp
+		   src/Line.cpp
+		   src/Rectangle.cpp
+		   src/ViewEditor.cpp
+		   src/main.cpp)
 
 project(Editor_Project VERSION ${PROJECT_VESRION})
 
-add_executable(editor ${SOURCES})
+add_executable(editor ${SOURCES_FILE})
 
 set_target_properties(editor PROPERTIES
     CXX_STANDARD 20
@@ -15,7 +22,7 @@ set_target_properties(editor PROPERTIES
 )
 
 target_include_directories(editor
-    PRIVATE "${INCLUDE_DIR}"
+    PRIVATE "${CMAKE_SOURCE_DIR}/include"
 )
 
 install(TARGETS editor RUNTIME DESTINATION bin)
