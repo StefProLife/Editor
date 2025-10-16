@@ -6,20 +6,16 @@ void EditorModel::SetView(ViewEditorPtr view)
 }
 
 void EditorModel::AddDocument(DocumentModelPtr document)
-{
-    auto it = std::find(_vectorDocuments.cbegin(), _vectorDocuments.cend(), document);
-    if (it != _vectorDocuments.cend()) return;
-    _vectorDocuments.push_back(document);
+{   for(const auto& item : _vectorDocuments)
+        if (item == document) return;
 
+    _vectorDocuments.push_back(document);
     _view->Update();
 }
 
 void EditorModel::RemoveDocument(DocumentModelPtr document)
 {
-    auto it = std::find(_vectorDocuments.cbegin(), _vectorDocuments.cend(), document);
-    if (it == _vectorDocuments.cend()) return;
-    _vectorDocuments.erase(it);
-
+    // TODO Логика удаления документа из списка.
     _view->Update();
 }
 
