@@ -3,7 +3,6 @@
 #include <string>
 #include "GraphicPrimitive.h"
 
-
 class Line : public GraphicPrimitive
 {
 public:

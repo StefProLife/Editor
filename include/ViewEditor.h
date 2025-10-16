@@ -1,11 +1,10 @@
 #pragma once
 
-#include "IViewEditor.h"
+#include "IEditor.h"
 
 class ViewEditor : public IViewEditor
 {
 public:
-    ViewEditor() = default;
     void SetModel(EditorModelPtr model) override;
     void Update() override;
 

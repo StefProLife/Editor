@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IEditorModel.h"
+#include "IEditor.h"
 
 class EditorModel : public IEditorModel
 {

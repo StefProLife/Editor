@@ -1,7 +1,7 @@
 #pragma once
 
 #include "IDocumentModel.h"
-#include "IViewEditor.h"
+#include "IEditor.h"
 
 class DocumentModel : public IDocumentModel
 {

@@ -1,8 +1,25 @@
 #pragma once
 
 #include <vector>
-#include "IViewEditor.h"
 #include "IDocumentModel.h"
+
+class IEditorModel;
+class IViewEditor;
+
+using EditorModelPtr = std::shared_ptr<IEditorModel>;
+using ViewEditorPtr = std::shared_ptr<IViewEditor>;
+
+class IViewEditor
+{
+public:
+    virtual ~IViewEditor() = default;
+    virtual void SetModel(EditorModelPtr model) = 0;
+    virtual void Update() = 0;
+    bool operator ==(const IViewEditor& other) const
+    {
+        return this == &other;
+    }
+};
 
 class IEditorModel
 {
@@ -18,5 +35,3 @@ public:
         return this == &other;
     }
 };
-
-using EditorModelPtr = std::shared_ptr<IEditorModel>;

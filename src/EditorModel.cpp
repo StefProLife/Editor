@@ -11,7 +11,7 @@ void EditorModel::AddDocument(DocumentModelPtr document)
     if (it != _vectorDocuments.cend()) return;
     _vectorDocuments.push_back(document);
 
-    _view->Update();
+    //_view->Update();
 }
 
 void EditorModel::RemoveDocument(DocumentModelPtr document)
@@ -20,7 +20,7 @@ void EditorModel::RemoveDocument(DocumentModelPtr document)
     if (it == _vectorDocuments.cend()) return;
     _vectorDocuments.erase(it);
 
-    _view->Update();
+    //_view->Update();
 }
 
 const std::vector<DocumentModelPtr>& EditorModel::GetDocuments() const
@@ -31,5 +31,5 @@ const std::vector<DocumentModelPtr>& EditorModel::GetDocuments() const
 void EditorModel::SetDocuments(const std::vector<DocumentModelPtr>& vectorDocument)
 {
    _vectorDocuments = vectorDocument;
-   _view->Update();
+   //_view->Update();
 }

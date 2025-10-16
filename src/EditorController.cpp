@@ -1,5 +1,8 @@
 #include "EditorController.h"
 #include "DocumentModel.h"
+#include "Rectangle.h"
+#include "Circle.h"
+#include "Line.h"
 
 EditorController::EditorController(EditorModelPtr model, ViewEditorPtr view)
     : _model(model), _view(view)

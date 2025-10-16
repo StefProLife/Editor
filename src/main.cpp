@@ -6,10 +6,11 @@
 
 int main(int argc, char const* argv[])
 {
-    //EditorModelPtr model = std::make_shared<EditorModel>();
-    //ViewEditorPtr view = std::make_shared<ViewEditor>();
+    EditorModelPtr model = std::make_shared<EditorModel>();
+    ViewEditorPtr view = std::make_shared<ViewEditor>();
+    view->SetModel(model);
 
-    //EditorController Controller(model, view);
+    EditorController Controller(model, view);
 
     return 0;
 }

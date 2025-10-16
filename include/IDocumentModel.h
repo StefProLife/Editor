@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+
 #include "IGraphicPrimitive.h"
 
 class IDocumentModel

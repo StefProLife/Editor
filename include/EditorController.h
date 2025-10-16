@@ -1,11 +1,10 @@
 #pragma once
 
-#include "IEditorModel.h"
-#include "IViewEditor.h"
+#include "IEditor.h"
+
 #include "GraphicRenderType.h"
-#include "Rectangle.h"
-#include "Circle.h"
-#include "Line.h"
+#include "GraphicRender.h"
+#include "GraphicColor.h"
 
 class EditorController
 {
@@ -19,6 +18,6 @@ public:
 
 private:
     EditorModelPtr _model;
-    // Используется для инициализации ModelDocumnt.
+    // Используется только для инициализации ModelDocumnt.
     ViewEditorPtr _view;
 };
