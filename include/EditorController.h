@@ -13,7 +13,7 @@ public:
     void CreateNewDocument();
     void ImportDocumentFromFile(const std::string& fileName);
     void ExportDocumentToFile(const std::string& fileName);
-    void CreatingGraphicalPrimitive(GraphicRenderType type, GraphicRender render, GraphicColor color, uint64_t id);
+    void CreatingGraphicalPrimitive(const std::string& nameDoc, GraphicRenderType type, GraphicRender render, GraphicColor color, uint64_t id);
     void RemovingGraphicalPrimitive(uint64_t id);
 
 private:

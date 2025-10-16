@@ -38,7 +38,7 @@ void EditorController::ExportDocumentToFile(const std::string& fileName)
         (*it)->Export();
 }
 
-void EditorController::CreatingGraphicalPrimitive(GraphicRenderType type, GraphicRender render, GraphicColor color, uint64_t id)
+void EditorController::CreatingGraphicalPrimitive(const std::string& nameDoc, GraphicRenderType type, GraphicRender render, GraphicColor color, uint64_t id)
 {
     IGraphicPrimitive* pIGraphicPrimitive;
     switch (type)
@@ -56,6 +56,7 @@ void EditorController::CreatingGraphicalPrimitive(GraphicRenderType type, Graphi
             return;
     }
 
+    pIGraphicPrimitive->Draw();
     // Поиск и добавление в текущего(переданного) документ.
 }
 
