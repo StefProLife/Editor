@@ -1,4 +1,5 @@
-#include <EditorModel.h>
+#include <algorithm>
+#include "EditorModel.h"
 
 void EditorModel::SetView(ViewEditorPtr view)
 {
