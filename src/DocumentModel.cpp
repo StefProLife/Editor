@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "DocumentModel.h"
 
 DocumentModel::DocumentModel(ViewEditorPtr view)
@@ -7,8 +8,8 @@ DocumentModel::DocumentModel(ViewEditorPtr view)
 
 void DocumentModel::AddPrimitive(GraphicPrimitivePtr primitive)
 {
-    //auto it = std::find(_vectorPrimitives.cbegin(), _vectorPrimitives.cend(), primitive);
-    //if (it != _vectorPrimitives.cend()) return;
+    auto it = std::find(_vectorPrimitives.cbegin(), _vectorPrimitives.cend(), primitive);
+    if (it != _vectorPrimitives.cend()) return;
     _vectorPrimitives.push_back(primitive);
 
     _view->Update();
@@ -16,10 +17,9 @@ void DocumentModel::AddPrimitive(GraphicPrimitivePtr primitive)
 
 void DocumentModel::RemovePrimitive(GraphicPrimitivePtr primitive)
 {
-    // TODO Логика удаления примитива из списка.
-    //auto it = std::find(_vectorPrimitives.cbegin(), _vectorPrimitives.cend(), primitive);
-    //if (it == _vectorPrimitives.cend()) return;
-    //_vectorPrimitives.erase(it);
+    auto it = std::find(_vectorPrimitives.cbegin(), _vectorPrimitives.cend(), primitive);
+    if (it == _vectorPrimitives.cend()) return;
+    _vectorPrimitives.erase(it);
 
     _view->Update();
 }
