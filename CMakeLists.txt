@@ -3,14 +3,14 @@ cmake_minimum_required(VERSION 3.12)
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 set(SOURCES_FILE src/Circle.cpp
-		   src/DocumentModel.cpp
-		   src/EditorController.cpp
-		   src/EditorModel.cpp
-		   src/GraphicPrimitive.cpp
-		   src/Line.cpp
-		   src/Rectangle.cpp
-		   src/ViewEditor.cpp
-		   src/main.cpp)
+			     src/DocumentModel.cpp
+			     src/EditorController.cpp
+				 src/EditorModel.cpp
+			     src/GraphicPrimitive.cpp
+				 src/Line.cpp
+				 src/Rectangle.cpp
+				 src/ViewEditor.cpp
+				 src/main.cpp)
 
 project(Editor_Project VERSION ${PROJECT_VESRION})
 
