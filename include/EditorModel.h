@@ -1,12 +1,12 @@
 #pragma once
 
 #include "IEditorModel.h"
-#include "IViewEditor.h"
 
 class EditorModel : public IEditorModel
 {
 public:
-    EditorModel(ViewEditorPtr view);
+    EditorModel() = default;
+    void SetView(ViewEditorPtr view) override;
     void AddDocument(DocumentModelPtr document) override;
     void RemoveDocument(DocumentModelPtr document) override;
     const std::vector<DocumentModelPtr>& GetDocuments() const override;

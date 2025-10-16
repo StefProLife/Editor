@@ -1,8 +1,9 @@
 #include <EditorModel.h>
 
-EditorModel::EditorModel(ViewEditorPtr view)
-    : _view(view)
-{}
+void EditorModel::SetView(ViewEditorPtr view)
+{
+    _view = view;
+}
 
 void EditorModel::AddDocument(DocumentModelPtr document)
 {

@@ -5,7 +5,8 @@
 class ViewEditor : public IViewEditor
 {
 public:
-    ViewEditor(EditorModelPtr model);
+    ViewEditor() = default;
+    void SetModel(EditorModelPtr model) override;
     void Update() override;
 
 private:

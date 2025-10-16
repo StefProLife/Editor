@@ -1,9 +1,10 @@
 #include <iostream>
 #include "ViewEditor.h"
 
-ViewEditor::ViewEditor(EditorModelPtr model)
-    : _model(model)
-{}
+void ViewEditor::SetModel(EditorModelPtr model)
+{
+    _model = model;
+}
 
 void ViewEditor::Update()
 {
